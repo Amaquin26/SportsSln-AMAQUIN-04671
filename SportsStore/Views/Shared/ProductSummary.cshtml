@@ -4,8 +4,8 @@
     <div class="bg-faded p-1">
         <h4>
             @Model.Name
-            <span class="badge badge-pill badge-primary" style="float:right">
-                <small>@Model.Price.ToString("c")</small>
+            <span class="badge rounded-pill text-white" style="float:right">
+                <small>Product Price: @Model.Price.ToString("c")</small>
             </span>
         </h4>
     </div>
@@ -23,3 +23,15 @@
         </span>
     </form>
 </div>
+
+<!-- Bootstrap class did not work -->
+<style>
+    .badge{
+        background-color: #0d6efd;
+        padding:5px;
+    }
+
+    .rounded-pill{
+        border-radius:10px;
+    }
+</style>
