@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-@*     <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" /> *@
+    @*     <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" /> *@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <title>Sports store</title>
 </head>
@@ -11,14 +11,8 @@
     <div class="bg-dark text-white p-2">
         <span class="navbar-brand ml-2">Welcome to SPORTS STORE</span>
     </div>
-    <div class="row m-1 p-1">
-        <div id="categories" class="col-3">
-            Categories
-            <vc:navigation-menu/>
-        </div>
-        <div class="col-9">
-            @RenderBody()
-        </div>
+    <div class="m-1 p-1">
+        @RenderBody()
     </div>
 </body>
 </html>
