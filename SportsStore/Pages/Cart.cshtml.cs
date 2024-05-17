@@ -20,9 +20,13 @@ namespace SportsStore.Pages
         }
         public IActionResult OnPost(long productId, string returnUrl)
         {
-            Product product = repository.Products
+            Product? product = repository.Products
             .FirstOrDefault(p => p.ProductID == productId);
-            Cart.AddItem(product, 1);
+
+            if(product != null) { 
+                Cart.AddItem(product, 1);
+            }
+
             return RedirectToPage(new { returnUrl = returnUrl });
         }
 
