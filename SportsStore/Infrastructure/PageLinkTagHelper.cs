@@ -37,12 +37,12 @@ namespace SportsStore.Infrastructure
                     tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
                     tag.Attributes["href"] = urlHelper.Action(PageAction,
                     new { productPage = i });
-                    //if (PageClassesEnabled)
-                    //{
-                    //    tag.AddCssClass(PageClass);
-                    //    tag.AddCssClass(i == PageModel.CurrentPage
-                    //    ? PageClassSelected : PageClassNormal);
-                    //}
+                    if (PageClassesEnabled)
+                    {
+                        tag.AddCssClass(PageClass);
+                        tag.AddCssClass(i == PageModel.CurrentPage
+                        ? PageClassSelected : PageClassNormal);
+                    }
                     tag.InnerHtml.Append(i.ToString());
                     result.InnerHtml.AppendHtml(tag);
                 }
