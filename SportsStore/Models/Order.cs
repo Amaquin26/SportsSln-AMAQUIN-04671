@@ -9,7 +9,7 @@ namespace SportsStore.Models
         public int OrderID { get; set; }
 
         [BindNever]
-        public ICollection<CartLine> Lines { get; set; }
+        public ICollection<CartLine> Lines { get; set; } = new List<CartLine>();
 
         [Required(ErrorMessage = "Please enter a name.")]
         public string? Name { get; set; }
@@ -30,4 +30,5 @@ namespace SportsStore.Models
         public string? Country { get; set; }
         public bool GiftWrap { get; set; }
     }
+
 }
